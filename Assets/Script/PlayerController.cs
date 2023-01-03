@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Extend;
 using GameThing;
 using Mirror;
+using Steamworks;
 using UnityEngine;
 
 namespace Player
@@ -43,13 +44,16 @@ namespace Player
             atkPoint = transform.Find("AtkPoint");
             currentHp = maxHp;    
             playerUi.Init(maxHp);
-            PlayerData data = GameManager.Instance.GetPlayerData(netId);
-            playerName = data.username;
-            playerUi.UpdateName(playerName);
             this.DelayExecute(2,()=>
             {
                 pigAnimator.CurState = PigState.Idle;
             });
+            PlayerData data = GameManager.Instance.GetPlayerData(netId);
+            if(isLocalPlayer)
+                data.username = SteamFriends.GetPersonaName();;
+            // playerData.username = personName;
+            playerName = data.username;
+            playerUi.UpdateName(playerName);
         }
 
         public override void OnStartLocalPlayer()

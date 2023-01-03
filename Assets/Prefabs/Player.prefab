@@ -58,6 +58,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   playerUi: {fileID: 8083972952850587577}
+  playerName: 
   maxHp: 100
   speed: 400
   damage: 10
@@ -383,7 +384,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -6384674597615116912, guid: c9ec1950f8ac3614eb58072aa2deb1fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -425,10 +426,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c9ec1950f8ac3614eb58072aa2deb1fe, type: 2}
+  m_sharedMaterial: {fileID: -6384674597615116912, guid: c9ec1950f8ac3614eb58072aa2deb1fe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
