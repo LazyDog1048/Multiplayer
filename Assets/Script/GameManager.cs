@@ -49,8 +49,11 @@ namespace GameThing
             if(playerDatas.ContainsKey(player.netId))
                 return;
             PlayerData playerData = new PlayerData(player.netId);
-            var steamOwner = SteamApps.GetAppOwner();
-            playerData.username = steamOwner.ToString();
+            // var steamOwner = SteamApps.GetAppOwner();
+            // string personName = SteamFriends.GetFriendPersonaName(steamOwner);
+            // string personName = SteamFriends.GetPersonaName();
+            // playerData.username = personName;
+            playerData.username = "Player " + playerDatas.Count;
             playerDatas.Add(player.netId, playerData);
         }
         
@@ -64,7 +67,7 @@ namespace GameThing
 
         public PlayerData GetPlayerData(uint netId)
         {
-            Debug.Log("getplayer");
+            // Debug.Log($"getPlayer  {netId}");
             if(!playerDatas.ContainsKey(netId))
                 return null;
             return playerDatas[netId];
@@ -72,7 +75,6 @@ namespace GameThing
         
         private void CheckGameOver()
         {
-            Debug.Log(playerDatas.Count);
             if (playerDatas.Count == 1)
             {
                 CmdGameOver();

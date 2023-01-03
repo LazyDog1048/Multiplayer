@@ -21,12 +21,12 @@ namespace Network
         public override void OnServerAddPlayer(NetworkConnectionToClient conn)
         {
             base.OnServerAddPlayer(conn);
-            Debug.Log($" addplayer  {SceneManager.GetActiveScene().name.Equals("OfflineScene")}");
-            // if(SceneManager.GetActiveScene().name.Equals("OfflineScene"))
-            //     return;
             PlayerController player = conn.identity.GetComponent<PlayerController>();
-            players.Add(player);
             GameManager.Instance.AddPlayer(player);
+
+            if(!SceneManager.GetActiveScene().name.Equals("OnlineScene"))
+                return;
+            players.Add(player);
             
             if(players.Count == maxConnections)
             {
