@@ -49,8 +49,9 @@ namespace Player
                 pigAnimator.CurState = PigState.Idle;
             });
             PlayerData data = GameManager.Instance.GetPlayerData(netId);
+            Debug.Log(data == null);
             if(isLocalPlayer)
-                data.username = SteamFriends.GetPersonaName();;
+                data.username = SteamFriends.GetPersonaName();
             // playerData.username = personName;
             playerName = data.username;
             playerUi.UpdateName(playerName);
