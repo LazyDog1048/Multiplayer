@@ -1,4 +1,4 @@
-using System;
+ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,7 +51,7 @@ namespace GameThing
             PlayerData playerData = new PlayerData(player.netId);
             // var steamOwner = SteamApps.GetAppOwner();
             // string personName = SteamFriends.GetFriendPersonaName(steamOwner);
-            // string personName = SteamFriends.GetPersonaName();
+            string personName = SteamFriends.GetPersonaName();
             // playerData.username = personName;
             playerData.username = "Player " + playerDatas.Count;
             playerDatas.Add(player.netId, playerData);

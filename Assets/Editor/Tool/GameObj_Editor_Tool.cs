@@ -129,13 +129,13 @@
 //         private static void ChangeLayer()
 //         {
 //             GameObject select = Selection.activeGameObject;
-//             var image = select.GetComponent<Image>();
-//             if (image == null)
+//             var steamImage = select.GetComponent<Image>();
+//             if (steamImage == null)
 //                 return;
 //             
-//             Vector3 scale = image.rectTransform.localScale;
+//             Vector3 scale = steamImage.rectTransform.localScale;
 //             SetImageSize(scale,select);
-//             UiTool.ForeachAllChild(image.rectTransform,DoThing);
+//             UiTool.ForeachAllChild(steamImage.rectTransform,DoThing);
 //             // CopyGameobj();
 //             void DoThing(int index, Transform rect)
 //             {
@@ -145,14 +145,14 @@
 //
 //         private static void SetImageSize(Vector2 scale,GameObject gameObject)
 //         {
-//             var image = gameObject.GetComponent<Image>();
-//             if (image == null)
+//             var steamImage = gameObject.GetComponent<Image>();
+//             if (steamImage == null)
 //                 return;
-//             image.SetNativeSize();
+//             steamImage.SetNativeSize();
 //             
-//             Vector3 size = image.rectTransform.sizeDelta;
-//             image.rectTransform.localScale = Vector3.one;
-//             image.rectTransform.sizeDelta = new Vector2(size.x * scale.x, size.y * scale.y);
+//             Vector3 size = steamImage.rectTransform.sizeDelta;
+//             steamImage.rectTransform.localScale = Vector3.one;
+//             steamImage.rectTransform.sizeDelta = new Vector2(size.x * scale.x, size.y * scale.y);
 //         }
 //     }
 // }
